@@ -1,4 +1,5 @@
-Day	Topics
-===	======
-3	regular expressions
-4	grids of characters, move around, look-up
+DAY	DIFFICULTY	TOPICS
+===	==========	======
+3	?			regular expressions
+4	?			grids of characters, move around, look-up
+5	easy		iterate, swap
