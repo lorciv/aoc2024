@@ -39,6 +39,16 @@ func cell(grid [][]string, c coord) string {
 	return grid[c.row][c.col]
 }
 
+func word(grid [][]string, start, dir coord) string {
+	w := ""
+	cur := start
+	for i := 0; i < 4; i++ {
+		w += cell(grid, cur)
+		cur = next(cur, dir)
+	}
+	return w
+}
+
 func main() {
 	var grid [][]string
 
@@ -59,13 +69,7 @@ func main() {
 			cur := coord{i, j}
 
 			for _, d := range directions {
-				c1 := cell(grid, cur)
-				c2 := cell(grid, next(cur, d))
-				c3 := cell(grid, next(next(cur, d), d))
-				c4 := cell(grid, next(next(next(cur, d), d), d))
-				word := c1 + c2 + c3 + c4
-
-				if word == "XMAS" {
+				if word(grid, cur, d) == "XMAS" {
 					count++
 				}
 			}
