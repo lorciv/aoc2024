@@ -1,3 +1,4 @@
 Day	Topics
 ===	======
-3	regex
+3	regular expressions
+4   grids of characters, move around, look-up
