@@ -15,17 +15,15 @@ type coord struct {
 }
 
 var (
-	dirUp        = coord{-1, 0}
-	dirDown      = coord{1, 0}
-	dirRight     = coord{0, 1}
-	dirLeft      = coord{0, -1}
+	// dirUp        = coord{-1, 0}
+	// dirDown      = coord{1, 0}
+	// dirRight     = coord{0, 1}
+	// dirLeft      = coord{0, -1}
 	dirUpRight   = coord{-1, 1}
 	dirDownRight = coord{1, 1}
 	dirUpLeft    = coord{-1, -1}
 	dirDownLeft  = coord{1, -1}
 )
-
-var directions = []coord{dirUp, dirDown, dirRight, dirLeft, dirUpRight, dirDownRight, dirUpLeft, dirDownLeft}
 
 func next(c, dir coord) coord {
 	return coord{
