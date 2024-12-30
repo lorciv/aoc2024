@@ -4,3 +4,5 @@ DAY	DIFFICULTY	TOPICS
 4	?			grids of characters, move around, look-up
 5	easy		iterate, swap
 6	hard		like day 4, but more complex
+7	medium		permutations (with repetition)
+				recursive algorithm is simple, but slow (exponentially)
