@@ -3,3 +3,4 @@ DAY	DIFFICULTY	TOPICS
 3	?			regular expressions
 4	?			grids of characters, move around, look-up
 5	easy		iterate, swap
+6	hard		like day 4, but more complex
