@@ -6,3 +6,4 @@ DAY	DIFFICULTY	TOPICS
 6	hard		like day 4, but more complex
 7	medium		permutations (with repetition)
 				recursive algorithm is simple, but slow (exponentially)
+8	easy		grid, look around, some geometry
