@@ -123,14 +123,58 @@ func score(trailhead coord) int {
 	return count
 }
 
+type trail struct {
+	head coord
+	tail *trail
+}
+
+func visited(t *trail, c coord) bool {
+	if t == nil {
+		return false
+	}
+	if t.head == c {
+		return true
+	}
+	return visited(t.tail, c)
+}
+
+func rating(trailhead coord) int {
+	count := 0
+
+	queue := []*trail{{head: trailhead}}
+	for len(queue) > 0 {
+		cur := queue[0]
+		queue = queue[1:]
+
+		if grid[cur.head.row][cur.head.col] == 9 {
+			count++
+			continue
+		}
+
+		for _, n := range neighbors(cur.head) {
+			if !visited(cur, n) {
+				queue = append(queue, &trail{head: n, tail: cur})
+			}
+		}
+	}
+
+	return count
+}
+
 func main() {
 	if err := read(); err != nil {
 		log.Fatal(err)
 	}
 
-	total := 0
+	totalScore := 0
 	for _, h := range trailheads() {
-		total += score(h)
+		totalScore += score(h)
 	}
-	fmt.Println(total)
+	fmt.Println(totalScore)
+
+	totalRating := 0
+	for _, h := range trailheads() {
+		totalRating += rating(h)
+	}
+	fmt.Println(totalRating)
 }
