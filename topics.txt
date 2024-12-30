@@ -11,3 +11,5 @@ DAY	DIFFICULTY	TOPICS
 10	medium		grid, explore paths, breadth-first search
 				part 1: simple search
 				part 2: find all paths
+11	hard		part 1: brute force
+				part 2: recursion and memoization
