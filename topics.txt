@@ -13,3 +13,4 @@ DAY	DIFFICULTY	TOPICS
 				part 2: find all paths
 11	hard		part 1: brute force
 				part 2: recursion and memoization
+				without memoization: https://www.reddit.com/r/adventofcode/comments/1hbm0al/comment/m2mbly8/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button

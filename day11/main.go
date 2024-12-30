@@ -28,23 +28,23 @@ func read() ([]int, error) {
 	return stones, nil
 }
 
-func blink(cur []int) []int {
-	var next []int
-	for _, c := range cur {
-		if c == 0 {
-			next = append(next, 1)
-		} else if s := strconv.Itoa(c); len(s)%2 == 0 {
-			mid := len(s) / 2
-			s1, s2 := s[:mid], s[mid:]
-			n1, _ := strconv.Atoi(s1)
-			n2, _ := strconv.Atoi(s2)
-			next = append(next, n1, n2)
-		} else {
-			next = append(next, c*2024)
-		}
-	}
-	return next
-}
+// func blink(cur []int) []int {
+// 	var next []int
+// 	for _, c := range cur {
+// 		if c == 0 {
+// 			next = append(next, 1)
+// 		} else if s := strconv.Itoa(c); len(s)%2 == 0 {
+// 			mid := len(s) / 2
+// 			s1, s2 := s[:mid], s[mid:]
+// 			n1, _ := strconv.Atoi(s1)
+// 			n2, _ := strconv.Atoi(s2)
+// 			next = append(next, n1, n2)
+// 		} else {
+// 			next = append(next, c*2024)
+// 		}
+// 	}
+// 	return next
+// }
 
 type input struct {
 	stone, blinks int
