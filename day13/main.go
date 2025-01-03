@@ -80,6 +80,17 @@ func tokens(m machine) int {
 	return min
 }
 
+// Part 2
+//
+// Button A: X+94, Y+34
+// Button B: X+22, Y+67
+// Prize: X=8400, Y=5400
+//
+// 8400 = A*94 + B*22
+// 5400 = A*34 + B*67
+//
+// Tokens = 3*A + B
+
 func main() {
 	machines, err := parse(os.Stdin)
 	if err != nil {
